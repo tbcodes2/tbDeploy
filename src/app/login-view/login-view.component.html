@@ -1,0 +1,17 @@
+
+<app-general-navbar></app-general-navbar>
+<div class="box">
+		<h2>Login</h2>
+		<form class="bg"  (submit)="login()">
+			<div class="inputBox">
+				<input type="text" [(ngModel)]="username" name="username" required="">
+				<label>Username</label>				
+			</div>
+			<div class="inputBox">
+				<input type="password" [(ngModel)]="password" name="password" required="">
+				<label>Password</label>				
+			</div>
+			<input type="submit" value="Login">
+			<div *ngIf="error">{{ error | json }}</div>
+		</form>
+  </div>
